@@ -8,9 +8,9 @@ function calculateMoney(ticketSale){
     const staffExpense = (totalStaff*StaffLunchAmount);
     const restAmount = ((ticketSale*ticketPrice) - (securityExpense+staffExpense))
     if(ticketSale < 0){
-        // console.log(`Invalid Number`);
+       return `Invalid Number`
     }else{
-        // console.log(restAmount);
+       return restAmount;
     }
 }
 calculateMoney(10);
