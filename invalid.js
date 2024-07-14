@@ -20,21 +20,44 @@
 // console.log(deleteInvalids({ num: [1, 2, 3] })); 
 
 
-function onlyInvalid(arr){
+// function onlyInvalid(arr){
 
+//     if(Array.isArray(arr)){
+//         const valirdArray = [];
+//         for(let i = 0; i < arr.length; i++){
+//             let element = arr[i];
+//             if(typeof element === 'number'&&  !isNaN(element)){
+//                 valirdArray.push(element)
+//             }
+//         }
+//         return valirdArray;
+//     }else{
+//         `input valid array`
+//     }
+// }
+// const arr = [1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]
+// const result = onlyInvalid(arr)
+// console.log(result)
+
+
+
+
+
+
+function validArray(arr){
+    const validArr = [];
     if(Array.isArray(arr)){
-        const valirdArray = [];
-        for(let i = 0; i < arr.length; i++){
+        for(let i = 0; i < arr.length; i++ ){
             let element = arr[i];
-            if(typeof element === 'number'&&  !isNaN(element)){
-                valirdArray.push(element)
+            if(typeof element === 'number' && !isNaN(element)){
+                validArr.push(element)
             }
         }
-        return valirdArray;
-    }else{
-        `input valid array`
-    }
+        return validArr;
+}else{
+    return 'give valid input'
 }
-const arr = [1, null, undefined, 18, -19, NaN, "12", [1, 2], { ob: "lala" }]
-const result = onlyInvalid(arr)
+}
+const arr = [1, 3, null, 'a', [23]]
+const result = validArray(arr)
 console.log(result)
